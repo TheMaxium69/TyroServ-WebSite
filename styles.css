@@ -1,5 +1,3 @@
-
-/*HEADER*/
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://tyrolium.fr/Contenu/Image/Background6.png');
   background-position: center;
@@ -38,8 +36,6 @@ header .btn{
   margin-bottom: 80px;
 }
 
-/*NavBar*/
-
 .navbar .navbar-toggler:focus {
   box-shadow: none;
 }
@@ -68,7 +64,6 @@ header .btn{
   top: 10px;
 }
 
-/* quand le menu est ouvert */
 .navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: transparent;
 }
@@ -93,7 +88,6 @@ header .btn{
     margin-top: 30px;
   }
 }
-
 
 #objectif h2 {
   margin-top: 60px;
@@ -121,7 +115,6 @@ header .btn{
   height: 50px;
 }
 
-
 #comment {
   background: linear-gradient(#5e81ff, #002261);
   padding: 50px 0;
@@ -138,5 +131,108 @@ header .btn{
 }
 
 #comment a:hover{
+  color: white;
+}
+
+iframe#form{
+  border: none;
+}
+
+.container {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#download{
+  display: flex;
+  margin-bottom: 100px;
+}
+
+#download div:first-of-type{
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://tyrolium.fr/Contenu/Image/TyroliumSwordBackground.png");
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+#download div:last-of-type{
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("http://tyrolium.fr/Contenu/Image/RhodoniteSwordBackground.png");
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+#download div {
+  width: 50%;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+#download div h2{
+  text-transform: uppercase;
+}
+
+@media(max-width: 767px) {
+  #download {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  }
+}
+
+#nosreseau h2 {
+  margin-top: 60px;
+  color:  white;
+}
+#nosreseau ul {
+  padding: 50px 0;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+
+}
+#nosreseau ul li {
+  background: linear-gradient(#5e81ff, #002261);
+  margin: 10px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+#nosreseau ul li#discord {
+  background: linear-gradient(#ff5e5e, #970000);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#nosreseau ul li h3{
+  font-weight: bold;
+  padding: 20px;
+}
+
+#nosreseau img.imgRe{
+  width: 50px;
+  height: 50px;
+}
+
+#nosreseau a:hover{
+  color: white;
+}
+
+footer {
+  background-color: black;
+  border-top: 10px solid;
+  border-color: blue;
+  margin-top: 50px;
+  padding: 20px 0 40px;
+}
+footer span{
+  text-align: center;
+}
+footer img {
+  width: 70px;
+}
+
+footer a:hover{
   color: white;
 }
