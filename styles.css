@@ -180,6 +180,9 @@ iframe#form{
 
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   }
+  #download div{
+    width: 80%;
+  }
 }
 
 #nosreseau h2 {
