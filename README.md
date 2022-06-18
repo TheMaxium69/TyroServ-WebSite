@@ -1,5 +1,5 @@
-# TyroServSiteFullHtml
-TyroServ Site Officiel [Full Html/Css]
+# TyroServ-WebSite
+TyroServ Site Officiel
 
 https://tyroserv.fr
 
