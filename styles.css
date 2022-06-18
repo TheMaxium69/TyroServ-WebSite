@@ -239,3 +239,7 @@ footer img {
 footer a:hover{
   color: white;
 }
+
+.iziToast-message.slideIn a:hover{
+    color: black;
+}
