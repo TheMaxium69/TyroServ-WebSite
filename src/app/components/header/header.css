@@ -1,0 +1,191 @@
+/* ── Wrapper ─────────────────────────────────────────────────────────────── */
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 580px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Background image ────────────────────────────────────────────────────── */
+
+/* Mettre le chemin de l'image dans [style.background-image] dans le HTML */
+.header__bg {
+  position: absolute;
+  inset: 0;
+  background-color: #050b18;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* ── Overlay ─────────────────────────────────────────────────────────────── */
+
+.header__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(5, 11, 24, 0.72) 0%, rgba(5, 11, 24, 0.5) 50%, rgba(5, 11, 24, 0.88) 100%),
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0, 0, 200, 0.15) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Contenu ─────────────────────────────────────────────────────────────── */
+
+.header__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1.5rem;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: header-fadein 0.9s ease both;
+}
+
+@keyframes header-fadein {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Logo ────────────────────────────────────────────────────────────────── */
+
+.header__logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5));
+}
+
+/* ── Badge ───────────────────────────────────────────────────────────────── */
+
+.header__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(147, 174, 255, 0.85);
+  background: rgba(5, 51, 200, 0.15);
+  border: 1px solid rgba(5, 51, 200, 0.35);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Titre ───────────────────────────────────────────────────────────────── */
+
+.header__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #ffffff;
+  margin: 0 0 1.25rem;
+  text-shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Sous-titre ──────────────────────────────────────────────────────────── */
+
+.header__sub {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  line-height: 1.75;
+  color: rgba(180, 200, 255, 0.65);
+  margin: 0 0 2rem;
+}
+
+/* ── Tags ────────────────────────────────────────────────────────────────── */
+
+.header__tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.header__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(180, 200, 255, 0.6);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+}
+
+.header__tag i {
+  font-size: 0.85rem;
+  color: #93aeff;
+}
+
+/* ── Vagues ──────────────────────────────────────────────────────────────── */
+
+.header__waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.header__waves-svg {
+  display: block;
+  width: 100%;
+  height: 140px;
+}
+
+.header__waves-parallax > use {
+  animation: ts-wave-move 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.header__waves-parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
+.header__waves-parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
+.header__waves-parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
+.header__waves-parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+
+@keyframes ts-wave-move {
+  0%   { transform: translate3d(-90px, 0, 0); }
+  100% { transform: translate3d(85px, 0, 0); }
+}
+
+:host-context([data-theme="dark"]) .header__waves-parallax > use:nth-child(1) { fill: rgba(15, 17, 23, 0.7); }
+:host-context([data-theme="dark"]) .header__waves-parallax > use:nth-child(2) { fill: rgba(15, 17, 23, 0.5); }
+:host-context([data-theme="dark"]) .header__waves-parallax > use:nth-child(3) { fill: rgba(15, 17, 23, 0.3); }
+:host-context([data-theme="dark"]) .header__waves-parallax > use:nth-child(4) { fill: #0f1117; }
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .header { height: 90svh; padding-top: 63px; }
+  .header__logo { width: 72px; height: 72px; margin-bottom: 1rem; }
+  .header__waves-svg { height: 80px; }
+}
+
+@media (max-width: 480px) {
+  .header { min-height: 600px; }
+  .header__badge { font-size: 0.62rem; padding: 0.3rem 0.75rem; margin-bottom: 1rem; }
+  .header__title { margin-bottom: 0.9rem; }
+  .header__sub { font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .header__waves-svg { height: 55px; }
+}
