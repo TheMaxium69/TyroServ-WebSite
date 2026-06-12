@@ -76,8 +76,8 @@
     </h2>
     <p class="intro intro--light">
       {{ lang() === 'en'
-        ? 'The third season of TyroServ is currently under active development. We are working on a new map, revamped mod selection and improved gameplay systems. No release date yet - join our Discord to be notified first.'
-        : 'La troisième saison de TyroServ est actuellement en développement actif. Nous travaillons sur une nouvelle carte, une sélection de mods revue et des systèmes de jeu améliorés. Pas encore de date de sortie - rejoignez notre Discord pour être notifié en premier.' }}
+        ? 'The third season of TyroServ is currently under active development. We are working on the long-awaited ore fusion feature, a colossal addition. No release date yet, join our Discord to be notified first.'
+        : 'La troisième saison de TyroServ est actuellement en développement actif. Nous travaillons sur la fonctionnalité tant attendue de fusion de minerais, un ajout colossal. Pas encore de date de sortie, rejoignez notre Discord pour être notifié en premier.' }}
     </p>
 
     <div class="dev-banner">
@@ -92,15 +92,16 @@
     </div>
 
     <div class="planned-grid">
+
+        <div class="planned-card">
+            <i class="ri-flask-line"></i>
+            <h4>{{ lang() === 'en' ? 'TyroMod' : 'TyroMod' }}</h4>
+            <p>{{ lang() === 'en' ? 'Our own mod featuring the long-awaited ore fusion mechanic for a whole new crafting experience.' : 'Notre propre mod avec la fusion de minerais tant attendue pour une toute nouvelle expérience de craft.' }}</p>
+        </div>
       <div class="planned-card">
         <i class="ri-map-2-line"></i>
         <h4>{{ lang() === 'en' ? 'New Map' : 'Nouvelle Carte' }}</h4>
         <p>{{ lang() === 'en' ? 'A fully custom world generation designed for faction warfare.' : 'Une génération de monde entièrement personnalisée pour la guerre de factions.' }}</p>
-      </div>
-      <div class="planned-card">
-        <i class="ri-flask-line"></i>
-        <h4>{{ lang() === 'en' ? 'Revised Mod Pack' : 'Mod Pack Revu' }}</h4>
-        <p>{{ lang() === 'en' ? 'Carefully selected mods to enhance PVP and crafting depth.' : 'Des mods soigneusement sélectionnés pour enrichir le PVP et le craft.' }}</p>
       </div>
       <div class="planned-card">
         <i class="ri-scales-line"></i>
