@@ -17,7 +17,7 @@ export class App {
   public PROJECT_CONTENT = computed(() =>
     this.langService.lang() === 'en'
       ? `<strong>TyroServ</strong> is a <strong>modded Minecraft PVP Faction server</strong> part of the Tyrolium ecosystem. Designed to offer a unique and original experience through the <strong>TyroMod</strong>, our very own mod built exclusively for TyroServ. <em>A Tyrolium subsidiary.</em>`
-      : `<strong>TyroServ</strong> est un <strong>serveur Minecraft PVP Faction moddé</strong> au sein de l'écosystème Tyrolium. Conçu pour offrir une expérience originale et unique grâce au <strong>TyroMod</strong>, notre propre mod développé exclusivement pour notre serveur. <em>Une Filiale de Tyrolium.</em>`
+      : `<strong>TyroServ</strong> est un <strong>serveur Minecraft PVP Faction moddé</strong> au sein de l'écosystème Tyrolium. Conçu pour offrir une expérience originale et unique grâce au <strong>TyroMod</strong>, notre propre mod développé exclusivement pour notre serveur. <em>Une filiale de Tyrolium.</em>`
   );
 
   public pages = computed<ITyroUiNavbarPages[]>(() =>
